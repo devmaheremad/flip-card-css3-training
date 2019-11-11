@@ -1,0 +1,105 @@
+
+*
+{
+    box-sizing: border-box;
+}
+
+body
+{
+    perspective: 600px;
+}
+
+.card
+{
+    width: 300px;
+    height: 320px;
+    margin: 50px auto;
+    position: relative;
+    border: 1px solid #888;
+    border-radius: 10px;
+    transition: all .8s ease-in-out;
+    transform-style: preserve-3d;  
+}
+
+.card:hover
+{
+    transform: rotateY(180deg);
+}
+
+.card > div
+{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+.card .front
+{
+    background-color: hsl(0, 10%, 81%);
+    border-radius: 10px;
+    z-index: 2;
+    backface-visibility: hidden;
+}
+
+.card .front header
+{
+    width: 100%;
+    height: 80px;
+    background-color: #5f6769;
+    border-radius: 10px 10px 0 0;
+}
+
+.card .front header img
+{
+    width: 100px;
+    height: 100px;
+    position: relative;
+    top: 2px;
+    border-radius: 50%
+}
+
+.card .front h3
+{
+    font-weight: bold;
+    font-size: 20px;
+    color: #2b2e30;
+    margin-top: 25px;
+    margin-bottom: 5px;
+}
+
+.card .front p
+{
+    font-size: 18px;
+    color: #5f6769;
+    line-height: 1.2;
+    text-align: center;
+    padding: 0 15px 0 15px;
+    margin-top: 5px;
+}
+
+.card .front span
+{
+    color: #046748;
+    font-weight: bold;
+}
+
+.card .back
+{
+    z-index: 1;
+    background-color: #dedede;
+    border-radius: 10px;
+    transform: rotateY(180deg);
+}
+
+.card .back ul
+{
+    list-style: none;
+    margin-left: -27px;
+    margin-top: 92px;
+}
+
+.card .back ul li
+{
+    text-align: center;
+}
